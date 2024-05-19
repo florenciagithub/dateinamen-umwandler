@@ -48,6 +48,7 @@ footer {
     font-size: 14px;
     color: #888;
 }
+
 #copyButton {
     padding: 10px 20px;
     background-color: #40E0D0; /* Mittleres Türkisblau */
@@ -61,3 +62,4 @@ footer {
 #copyButton:hover {
     background-color: #3ac0b8; /* Dunkleres Türkisblau beim Hover */
 }
+
