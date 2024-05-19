@@ -28,7 +28,7 @@ input {
 
 button {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #6c757d; /* Weniger knalliges Grün */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -37,7 +37,7 @@ button {
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #5a6268; /* Dunklerer Farbton beim Hover */
 }
 
 p {
