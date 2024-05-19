@@ -34,6 +34,7 @@ function convertName() {
         .replace(/\^/g, '-')
         .replace(/`/g, '-')
         .replace(/\{/g, '-')
+        .replace(/“/g, '-')
         .replace(/\|/g, '-')
         .replace(/\}/g, '-')
         .replace(/~/g, '-')
@@ -67,9 +68,13 @@ function copyOutputText() {
 
     // Temporäre visuelle Rückmeldung auf dem Button
     let copyButton = document.getElementById('copyButton');
-    copyButton.textContent = 'Kopiert!';
+    copyButton.textContent = 'Copied : )';
     setTimeout(() => {
         copyButton.textContent = 'C';
     }, 2000); // Rücksetzen nach 2 Sekunden
+
+    // Leere die Eingabe- und Ausgabefelder
+    document.getElementById('inputName').value = '';
+    document.getElementById('outputName').textContent = '';
 }
 
