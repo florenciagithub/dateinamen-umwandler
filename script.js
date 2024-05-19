@@ -8,7 +8,7 @@ function convertName() {
         .replace(/Ö/g, 'O')
         .replace(/Ü/g, 'U')
         .replace(/ß/g, 'ss')
-        .replace(/[^a-zA-Z0-9äöüÄÖÜß_]/g, '-')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, Ä, Ö, Ü, ß, _ durch -
+       .replace(/[^a-zA-Z0-9äöüÄÖÜß_ ]/g, '-')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, Ä, Ö, Ü, ß, _ und Leerzeichen durch -
         .replace(/-+/g, '-')  // Ersetzt mehrere aufeinanderfolgende - durch ein einzelnes -
         .trim();
     document.getElementById('outputName').textContent = outputName.charAt(0).toUpperCase() + outputName.slice(1);
