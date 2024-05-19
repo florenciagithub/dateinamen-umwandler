@@ -64,6 +64,12 @@ function copyOutputText() {
     textarea.select();
     document.execCommand('copy');
     document.body.removeChild(textarea);
-    alert('Ausgabetext kopiert!');
+
+    // Temporäre visuelle Rückmeldung auf dem Button
+    let copyButton = document.getElementById('copyButton');
+    copyButton.textContent = 'Kopiert!';
+    setTimeout(() => {
+        copyButton.textContent = 'C';
+    }, 2000); // Rücksetzen nach 2 Sekunden
 }
 
