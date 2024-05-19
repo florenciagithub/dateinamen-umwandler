@@ -1,7 +1,6 @@
 body {
     font-family: 'Nunito', sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -15,7 +14,6 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    position: relative;
 }
 
 input {
@@ -28,7 +26,7 @@ input {
 
 button {
     padding: 10px 20px;
-    background-color: #6c757d; /* Weniger knalliges Grün */
+    background-color: #2c6f31; /* Weniger knalliges Grün */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -37,7 +35,7 @@ button {
 }
 
 button:hover {
-    background-color: #5a6268; /* Dunklerer Farbton beim Hover */
+    background-color: #245829; /* Dunkleres Grün beim Hover */
 }
 
 p {
@@ -46,8 +44,7 @@ p {
 }
 
 footer {
-    margin-top: 20px;
+    margin-top: 30px;
     font-size: 14px;
-    color: #666;
-    text-align: center;
+    color: #888;
 }
