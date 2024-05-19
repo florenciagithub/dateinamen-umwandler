@@ -1,12 +1,15 @@
 function convertName() {
     let inputName = document.getElementById('inputName').value;
     let outputName = inputName
-        .replace(/ä/g, 'a')
-        .replace(/ö/g, 'o')
-        .replace(/ü/g, 'u')
+        .replace(/ä/g, 'ä')
+        .replace(/ö/g, 'ö')
+        .replace(/ü/g, 'ü')
+        .replace(/Ä/g, 'Ä')
+        .replace(/Ö/g, 'Ö')
+        .replace(/Ü/g, 'Ü')
         .replace(/ß/g, 'ss')
-       .replace(/[^a-zA-Z0-9äöüß \-_]/g, ' ')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, ß, -, _ durch Leerzeichen
-        .replace(/\s+/g, ' ')  // Ersetzt mehrere Leerzeichen durch ein einzelnes Leerzeichen
+        .replace(/[^a-zA-Z0-9äöüÄÖÜß_]/g, '-')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, Ä, Ö, Ü, ß, _ durch -
+        .replace(/\s+/g, '-')  // Ersetzt mehrere Leerzeichen durch ein einzelnes -
         .trim();
     document.getElementById('outputName').textContent = outputName.charAt(0).toUpperCase() + outputName.slice(1);
 }
