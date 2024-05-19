@@ -13,6 +13,8 @@ function convertName() {
 
 function convertToLowercase() {
     let outputName = document.getElementById('outputName').textContent;
-    outputName = outputName.charAt(0).toUpperCase() + outputName.slice(1).toLowerCase();
-    document.getElementById('outputName').textContent = outputName;
+    if (outputName) {
+        outputName = outputName.charAt(0).toUpperCase() + outputName.slice(1).toLowerCase();
+        document.getElementById('outputName').textContent = outputName;
+    }
 }
