@@ -68,7 +68,7 @@ function copyOutputText() {
 
     // Temporäre visuelle Rückmeldung auf dem Button
     let copyButton = document.getElementById('copyButton');
-    copyButton.textContent = 'Copied : )';
+    copyButton.textContent = 'Kopiert! : )';
     setTimeout(() => {
         copyButton.textContent = 'C';
     }, 2000); // Rücksetzen nach 2 Sekunden
