@@ -1,6 +1,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -48,4 +49,5 @@ footer {
     margin-top: 20px;
     font-size: 14px;
     color: #666;
+    text-align: center;
 }
