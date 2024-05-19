@@ -55,3 +55,11 @@ function convertToLowercase() {
         document.getElementById('outputName').textContent = outputName;
     }
 }
+function copyOutputText() {
+    let outputText = document.getElementById('outputName').textContent;
+    navigator.clipboard.writeText(outputText).then(() => {
+        alert('Ausgabetext kopiert!');
+    }).catch(err => {
+        console.error('Fehler beim Kopieren: ', err);
+    });
+}
