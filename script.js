@@ -1,16 +1,50 @@
 function convertName() {
     let inputName = document.getElementById('inputName').value;
+
     let outputName = inputName
-        .replace(/ä/g, 'a')
-        .replace(/ö/g, 'o')
-        .replace(/ü/g, 'u')
-        .replace(/Ä/g, 'A')
-        .replace(/Ö/g, 'O')
-        .replace(/Ü/g, 'U')
-        .replace(/ß/g, 'ss')
-       .replace(/[^a-zA-Z0-9äöüÄÖÜß_ ]/g, '-')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, Ä, Ö, Ü, ß, _ und Leerzeichen durch -
-        .replace(/-+/g, '-')  // Ersetzt mehrere aufeinanderfolgende - durch ein einzelnes -
+        
+        // Ersetzt & durch "and"
+        .replace(/&/g, 'and')
+        // Ersetzt + durch "and"
+        .replace(/\+/g, 'and')
+
+        // Ersetzt die häufigsten Sonderzeichen durch -
+        .replace(/!/g, '-')
+        .replace(/"/g, '-')
+        .replace(/#/g, '-')
+        .replace(/\$/g, '-')
+        .replace(/%/g, '-')
+        .replace(/'/g, '-')
+        .replace(/\(/g, '-')
+        .replace(/\)/g, '-')
+        .replace(/\*/g, '-')
+        .replace(/,/g, '-')
+        .replace(/\./g, '-')
+        .replace(/\//g, '-')
+        .replace(/:/g, '-')
+        .replace(/;/g, '-')
+        .replace(/</g, '-')
+        .replace(/=/g, '-')
+        .replace(/>/g, '-')
+        .replace(/\?/g, '-')
+        .replace(/@/g, '-')
+        .replace(/\[/g, '-')
+        .replace(/\\/g, '-')
+        .replace(/\]/g, '-')
+        .replace(/\^/g, '-')
+        .replace(/`/g, '-')
+        .replace(/\{/g, '-')
+        .replace(/\|/g, '-')
+        .replace(/\}/g, '-')
+        .replace(/~/g, '-')
+        .replace(/-/g, '-')  // Ersetzt Bindestrich durch Bindestrich, um sicherzustellen, dass dieser immer korrekt behandelt wird
+
+        // Mehrere aufeinanderfolgende Bindestriche werden durch ein einzelnes ersetzt
+        .replace(/--+/g, '-')
+        
+        // Trimmen von überflüssigen Bindestrichen am Anfang und Ende
         .trim();
+
     document.getElementById('outputName').textContent = outputName.charAt(0).toUpperCase() + outputName.slice(1);
 }
 
