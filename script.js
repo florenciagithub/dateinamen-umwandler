@@ -5,7 +5,7 @@ function convertName() {
         .replace(/ö/g, 'o')
         .replace(/ü/g, 'u')
         .replace(/ß/g, 'ss')
-        .replace(/[^a-zA-Z0-9 ]/g, ' ')  // Ersetzt alle Sonderzeichen durch Leerzeichen
+        .replace(/[^a-zA-Z0-9äöüß ]/g, ' ')  // Ersetzt alle Sonderzeichen außer ä, ö, ü, ß durch Leerzeichen
         .replace(/\s+/g, ' ')  // Ersetzt mehrere Leerzeichen durch ein einzelnes Leerzeichen
         .trim();
     document.getElementById('outputName').textContent = outputName.charAt(0).toUpperCase() + outputName.slice(1);
@@ -13,6 +13,6 @@ function convertName() {
 
 function convertToLowercase() {
     let outputName = document.getElementById('outputName').textContent;
-    outputName = outputName.charAt(0) + outputName.slice(1).toLowerCase();
+    outputName = outputName.charAt(0).toUpperCase() + outputName.slice(1).toLowerCase();
     document.getElementById('outputName').textContent = outputName;
 }
